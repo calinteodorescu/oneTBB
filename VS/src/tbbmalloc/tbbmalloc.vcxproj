@@ -43,14 +43,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tbbmalloc.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tbbmalloc_debug</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Build\$(SolutionName)\Bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Build\$(SolutionName)\Projects\$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tbbmalloc.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tbbmalloc</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Build\$(SolutionName)\Bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Build\$(SolutionName)\Projects\$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
@@ -72,6 +72,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;TBB_USE_DEBUG;__TBBMALLOC_BUILD;__TBB_USE_ITT_NOTIFY;CMAKE_INTDIR="Debug";</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;TBB_USE_DEBUG;__TBBMALLOC_BUILD;__TBB_USE_ITT_NOTIFY;CMAKE_INTDIR=\"Debug\";</PreprocessorDefinitions>
@@ -95,6 +96,7 @@
       <ModuleDefinitionFile>D:/Git/oneTBB/src/tbbmalloc/def/win64-tbbmalloc.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbbmalloc_debug.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -116,8 +118,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;__TBBMALLOC_BUILD;__TBB_USE_ITT_NOTIFY;CMAKE_INTDIR="Release";</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;__TBBMALLOC_BUILD;__TBB_USE_ITT_NOTIFY;CMAKE_INTDIR=\"Release\";</PreprocessorDefinitions>
@@ -141,6 +143,7 @@
       <ModuleDefinitionFile>D:/Git/oneTBB/src/tbbmalloc/def/win64-tbbmalloc.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbbmalloc.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
