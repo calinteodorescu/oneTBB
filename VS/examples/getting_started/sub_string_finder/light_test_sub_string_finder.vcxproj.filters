@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\VS\CMakeFiles\fe48aa694a79b9af9ec6d8c256331355\light_test_sub_string_finder.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Git\oneTBB\examples\getting_started\sub_string_finder\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\CMakeFiles\light_test_sub_string_finder" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{309E92EC-229D-3842-B3A8-96788F37E9B2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

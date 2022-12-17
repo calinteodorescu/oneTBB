@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B18DB7CA-274A-3D91-9CDD-0909957887FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tachyon</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tachyon.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tachyon</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tachyon.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tachyon</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_minsizerel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tachyon.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tachyon</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Git\oneTBB\VS\msvc_19.34_cxx_64_md_relwithdebinfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tachyon.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tachyon</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TBB_USE_DEBUG;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;TBB_USE_DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\msvc_19.34_cxx_64_md_debug\tbb12_debug.lib;..\..\..\msvc_19.34_cxx_64_md_debug\UI_LIB_tachyon_debug.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tachyon.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tachyon.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\msvc_19.34_cxx_64_md_release\tbb12.lib;..\..\..\msvc_19.34_cxx_64_md_release\UI_LIB_tachyon.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tachyon.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tachyon.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\msvc_19.34_cxx_64_md_minsizerel\tbb12.lib;..\..\..\msvc_19.34_cxx_64_md_minsizerel\UI_LIB_tachyon.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_minsizerel/tachyon.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_minsizerel/tachyon.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\oneTBB\examples\parallel_for\tachyon\..\..;D:\Git\oneTBB\src\tbb\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\msvc_19.34_cxx_64_md_relwithdebinfo\tbb12.lib;..\..\..\msvc_19.34_cxx_64_md_relwithdebinfo\UI_LIB_tachyon.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_relwithdebinfo/tachyon.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_relwithdebinfo/tachyon.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\examples\parallel_for\tachyon\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Git/oneTBB/examples/parallel_for/tachyon/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/parallel_for/tachyon/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\Git\oneTBB\examples\common\cmake\common.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\examples\parallel_for\tachyon\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Git/oneTBB/examples/parallel_for/tachyon/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/parallel_for/tachyon/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\Git\oneTBB\examples\common\cmake\common.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\examples\parallel_for\tachyon\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Git/oneTBB/examples/parallel_for/tachyon/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/parallel_for/tachyon/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\Git\oneTBB\examples\common\cmake\common.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Git\oneTBB\VS\examples\parallel_for\tachyon\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Git/oneTBB/examples/parallel_for/tachyon/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/parallel_for/tachyon/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\Git\oneTBB\examples\common\cmake\common.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Git\oneTBB\VS\examples\parallel_for\tachyon\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\trace.tbb.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\main.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\pthread.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\tachyon_video.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\api.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\apigeom.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\apitrigeom.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\bndbox.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\box.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\camera.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\coordsys.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\cylinder.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\extvol.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\global.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\grid.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\imageio.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\imap.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\intersect.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\jpeg.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\light.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\objbound.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\parse.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\plane.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\ppm.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\quadric.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\render.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\ring.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\shade.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\sphere.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\texture.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\tgafile.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\trace_rest.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\triangle.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\ui.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\util.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\vector.cpp" />
+    <ClCompile Include="D:\Git\oneTBB\examples\parallel_for\tachyon\src\vol.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Git\oneTBB\VS\ZERO_CHECK.vcxproj">
+      <Project>{CC2F96E0-33B3-39FC-92E8-B642B502DDAD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\gui\UI_LIB_tachyon.vcxproj">
+      <Project>{45F79717-EDDC-3579-A2E5-2D37D1780730}</Project>
+      <Name>UI_LIB_tachyon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\src\tbb\tbb.vcxproj">
+      <Project>{8443D1A7-F2F8-3EA9-88EF-33FE671CE841}</Project>
+      <Name>tbb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

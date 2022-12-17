@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3792A95F-6198-3EEF-956C-96CCC0660068}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\examples\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Git/oneTBB/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Git/oneTBB/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Git/oneTBB/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Git\oneTBB\VS\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Git/oneTBB/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Git\oneTBB\VS\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Git\oneTBB\VS\ZERO_CHECK.vcxproj">
+      <Project>{CC2F96E0-33B3-39FC-92E8-B642B502DDAD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_arena\fractal\gui\UI_LIB_fractal.vcxproj">
+      <Project>{975F88F6-A2D1-3950-BB46-432E39492B9F}</Project>
+      <Name>UI_LIB_fractal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\polygon_overlay\gui\UI_LIB_polygon_overlay.vcxproj">
+      <Project>{A285DA99-9701-3148-BFC9-EC9760292586}</Project>
+      <Name>UI_LIB_polygon_overlay</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\seismic\gui\UI_LIB_seismic.vcxproj">
+      <Project>{5DA0D0EC-98F0-3EF3-9F5C-FD14F6EB25B1}</Project>
+      <Name>UI_LIB_seismic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\gui\UI_LIB_tachyon.vcxproj">
+      <Project>{45F79717-EDDC-3579-A2E5-2D37D1780730}</Project>
+      <Name>UI_LIB_tachyon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\binpack\binpack.vcxproj">
+      <Project>{AB03B8F7-671E-38B3-BEA0-BB64DDFBBECB}</Project>
+      <Name>binpack</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\convex_hull\convex_hull_bench.vcxproj">
+      <Project>{E6C64E21-2942-3EBB-B111-55F3F8E9D860}</Project>
+      <Name>convex_hull_bench</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\convex_hull\convex_hull_sample.vcxproj">
+      <Project>{360A7832-78AA-329A-8935-D68670BCE263}</Project>
+      <Name>convex_hull_sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\concurrent_hash_map\count_strings\count_strings.vcxproj">
+      <Project>{3A52E122-24CC-301A-B5CF-43F6AF0B5689}</Project>
+      <Name>count_strings</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\dining_philosophers\dining_philosophers.vcxproj">
+      <Project>{229E4BD0-DD77-3667-B75D-CAD264CCE0DB}</Project>
+      <Name>dining_philosophers</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\fgbzip2\fgbzip2.vcxproj">
+      <Project>{DBC18CC1-83F2-345F-A831-FE6C26BACD7D}</Project>
+      <Name>fgbzip2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\test_all\fibonacci\fibonacci.vcxproj">
+      <Project>{CC12C5B8-FE51-3FB7-B930-3374D91733A7}</Project>
+      <Name>fibonacci</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_arena\fractal\fractal.vcxproj">
+      <Project>{6C19A03E-D23D-3A9A-AB7E-2FBF237B0879}</Project>
+      <Name>fractal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\game_of_life\game_of_life.vcxproj">
+      <Project>{7BEC576A-E5DA-3DFC-9124-5A2147513C05}</Project>
+      <Name>game_of_life</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\logic_sim\logic_sim.vcxproj">
+      <Project>{17B4A213-835A-3E92-939D-1EF4A273A6A8}</Project>
+      <Name>logic_sim</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for_each\parallel_preorder\parallel_preorder.vcxproj">
+      <Project>{8FCC6737-157B-3E97-A54E-D243C219C9F9}</Project>
+      <Name>parallel_preorder</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\polygon_overlay\polygon_overlay.vcxproj">
+      <Project>{AC7F4113-52E5-34F5-A6E4-420DC96478E8}</Project>
+      <Name>polygon_overlay</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\primes\primes.vcxproj">
+      <Project>{F9701B61-F323-38B5-9197-74AEF893A58D}</Project>
+      <Name>primes</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\seismic\seismic.vcxproj">
+      <Project>{DEF7BCBC-A24A-3163-A9A5-E78F4E9A9AD7}</Project>
+      <Name>seismic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\concurrent_priority_queue\shortpath\shortpath.vcxproj">
+      <Project>{DEA125B4-B5EF-3B54-86A6-D1B5F0788CF0}</Project>
+      <Name>shortpath</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\som\som.vcxproj">
+      <Project>{4F8D7638-9BFE-3D51-A88F-624457C684D2}</Project>
+      <Name>som</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_pipeline\square\square.vcxproj">
+      <Project>{C78E1105-3995-33DA-B954-A5A4634A24E6}</Project>
+      <Name>square</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_extended.vcxproj">
+      <Project>{EE7AA5D8-BE65-3F65-82C7-3D84F4FA3E26}</Project>
+      <Name>sub_string_finder_extended</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_pretty.vcxproj">
+      <Project>{EF82128D-604B-34A6-BD36-4973E1A5ACD5}</Project>
+      <Name>sub_string_finder_pretty</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_simple.vcxproj">
+      <Project>{1D71CAF0-E376-3B5C-9F17-560D611CDDFC}</Project>
+      <Name>sub_string_finder_simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_group\sudoku\sudoku.vcxproj">
+      <Project>{ECD570BB-CABB-3923-950E-B600D338AB1F}</Project>
+      <Name>sudoku</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\tachyon.vcxproj">
+      <Project>{B18DB7CA-274A-3D91-9CDD-0909957887FA}</Project>
+      <Name>tachyon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

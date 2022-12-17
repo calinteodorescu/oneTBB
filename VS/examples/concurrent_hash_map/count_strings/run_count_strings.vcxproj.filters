@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\VS\CMakeFiles\ee698d7c55d5cc6b36844a3575b87731\run_count_strings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Git\oneTBB\examples\concurrent_hash_map\count_strings\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Git\oneTBB\VS\examples\concurrent_hash_map\count_strings\CMakeFiles\run_count_strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{309E92EC-229D-3842-B3A8-96788F37E9B2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

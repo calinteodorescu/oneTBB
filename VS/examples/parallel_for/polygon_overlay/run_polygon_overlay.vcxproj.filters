@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\VS\CMakeFiles\7eb67ee436020df963181371a5c61709\run_polygon_overlay.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Git\oneTBB\examples\parallel_for\polygon_overlay\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Git\oneTBB\VS\examples\parallel_for\polygon_overlay\CMakeFiles\run_polygon_overlay" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{309E92EC-229D-3842-B3A8-96788F37E9B2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

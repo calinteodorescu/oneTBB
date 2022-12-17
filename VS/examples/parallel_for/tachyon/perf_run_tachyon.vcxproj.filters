@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\VS\CMakeFiles\27b1bd344150fa175dd4e90922f79bd7\perf_run_tachyon.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Git\oneTBB\examples\parallel_for\tachyon\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\CMakeFiles\perf_run_tachyon" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{309E92EC-229D-3842-B3A8-96788F37E9B2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3792A95F-6198-3EEF-956C-96CCC0660068}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Git\oneTBB\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Git/oneTBB/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\CMakeLists-CXX.txt.in;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\foo.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\main.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Tools\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\Git\oneTBB\cmake\compilers\MSVC.cmake;D:\Git\oneTBB\cmake\config_generation.cmake;D:\Git\oneTBB\cmake\hwloc_detection.cmake;D:\Git\oneTBB\cmake\memcheck.cmake;D:\Git\oneTBB\cmake\packaging.cmake;D:\Git\oneTBB\cmake\sanitize.cmake;D:\Git\oneTBB\cmake\test_spec.cmake;D:\Git\oneTBB\cmake\utils.cmake;D:\Git\oneTBB\cmake\vars_utils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Git/oneTBB/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\CMakeLists-CXX.txt.in;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\foo.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\main.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Tools\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\Git\oneTBB\cmake\compilers\MSVC.cmake;D:\Git\oneTBB\cmake\config_generation.cmake;D:\Git\oneTBB\cmake\hwloc_detection.cmake;D:\Git\oneTBB\cmake\memcheck.cmake;D:\Git\oneTBB\cmake\packaging.cmake;D:\Git\oneTBB\cmake\sanitize.cmake;D:\Git\oneTBB\cmake\test_spec.cmake;D:\Git\oneTBB\cmake\utils.cmake;D:\Git\oneTBB\cmake\vars_utils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Git/oneTBB/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\CMakeLists-CXX.txt.in;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\foo.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\main.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Tools\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\Git\oneTBB\cmake\compilers\MSVC.cmake;D:\Git\oneTBB\cmake\config_generation.cmake;D:\Git\oneTBB\cmake\hwloc_detection.cmake;D:\Git\oneTBB\cmake\memcheck.cmake;D:\Git\oneTBB\cmake\packaging.cmake;D:\Git\oneTBB\cmake\sanitize.cmake;D:\Git\oneTBB\cmake\test_spec.cmake;D:\Git\oneTBB\cmake\utils.cmake;D:\Git\oneTBB\cmake\vars_utils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Git\oneTBB\VS\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Git/oneTBB/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Tools\CMake\share\cmake-3.24\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckCXXSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\CMakeLists-CXX.txt.in;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\foo.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIPOSupported\main.cpp;C:\Tools\CMake\share\cmake-3.24\Modules\CheckIncludeFileCXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckCompilerFlag.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Tools\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Tools\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\Git\oneTBB\VS\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\Git\oneTBB\cmake\compilers\MSVC.cmake;D:\Git\oneTBB\cmake\config_generation.cmake;D:\Git\oneTBB\cmake\hwloc_detection.cmake;D:\Git\oneTBB\cmake\memcheck.cmake;D:\Git\oneTBB\cmake\packaging.cmake;D:\Git\oneTBB\cmake\sanitize.cmake;D:\Git\oneTBB\cmake\test_spec.cmake;D:\Git\oneTBB\cmake\utils.cmake;D:\Git\oneTBB\cmake\vars_utils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Git\oneTBB\VS\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Git\oneTBB\VS\ZERO_CHECK.vcxproj">
+      <Project>{CC2F96E0-33B3-39FC-92E8-B642B502DDAD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_arena\fractal\gui\UI_LIB_fractal.vcxproj">
+      <Project>{975F88F6-A2D1-3950-BB46-432E39492B9F}</Project>
+      <Name>UI_LIB_fractal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\polygon_overlay\gui\UI_LIB_polygon_overlay.vcxproj">
+      <Project>{A285DA99-9701-3148-BFC9-EC9760292586}</Project>
+      <Name>UI_LIB_polygon_overlay</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\seismic\gui\UI_LIB_seismic.vcxproj">
+      <Project>{5DA0D0EC-98F0-3EF3-9F5C-FD14F6EB25B1}</Project>
+      <Name>UI_LIB_seismic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\gui\UI_LIB_tachyon.vcxproj">
+      <Project>{45F79717-EDDC-3579-A2E5-2D37D1780730}</Project>
+      <Name>UI_LIB_tachyon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\_test_malloc_atexit.vcxproj">
+      <Project>{693655F6-A1C1-313E-91EC-FFBFA28BB099}</Project>
+      <Name>_test_malloc_atexit</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\_test_malloc_lib_unload.vcxproj">
+      <Project>{EB0B7024-A04E-3BC4-B71E-7A4402A54C2D}</Project>
+      <Name>_test_malloc_lib_unload</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\_test_malloc_used_by_lib.vcxproj">
+      <Project>{D96EB96D-18A7-3A12-BDB0-99D429132404}</Project>
+      <Name>_test_malloc_used_by_lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\binpack\binpack.vcxproj">
+      <Project>{AB03B8F7-671E-38B3-BEA0-BB64DDFBBECB}</Project>
+      <Name>binpack</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_allocators.vcxproj">
+      <Project>{661F3398-8608-398E-88B1-9F21972E5F47}</Project>
+      <Name>conformance_allocators</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_arena_constraints.vcxproj">
+      <Project>{53E6A63C-71EB-3210-AAE3-97E872EA300C}</Project>
+      <Name>conformance_arena_constraints</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_async_node.vcxproj">
+      <Project>{B5F6BE31-3978-31FC-835C-A26E6A55B024}</Project>
+      <Name>conformance_async_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_blocked_range.vcxproj">
+      <Project>{63C500D3-BA04-3779-ABC9-6F78652B5BFC}</Project>
+      <Name>conformance_blocked_range</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_blocked_range2d.vcxproj">
+      <Project>{457915AA-92C8-3ECA-AAF3-0D3753284FC5}</Project>
+      <Name>conformance_blocked_range2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_blocked_range3d.vcxproj">
+      <Project>{DB99567C-746B-35EF-852F-DCA9FB4DE374}</Project>
+      <Name>conformance_blocked_range3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_blocked_rangeNd.vcxproj">
+      <Project>{C5E61278-0055-3EA5-8ADB-68DD61738161}</Project>
+      <Name>conformance_blocked_rangeNd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_broadcast_node.vcxproj">
+      <Project>{E393AAB0-0CF9-3915-A6E1-D9D567AB8D0C}</Project>
+      <Name>conformance_broadcast_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_buffer_node.vcxproj">
+      <Project>{E450D8B1-9D4C-39F7-AE6D-1601172F5217}</Project>
+      <Name>conformance_buffer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_collaborative_call_once.vcxproj">
+      <Project>{9BBB7745-35EB-3A2E-8DC3-9E94DF6B011A}</Project>
+      <Name>conformance_collaborative_call_once</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_combinable.vcxproj">
+      <Project>{1D179D67-79B2-365F-B065-0A228661F405}</Project>
+      <Name>conformance_combinable</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_composite_node.vcxproj">
+      <Project>{EB7EBE66-F90C-3F7A-9058-D96F5184F8EF}</Project>
+      <Name>conformance_composite_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_hash_map.vcxproj">
+      <Project>{3935F35E-7F2B-3F37-A11A-D3A1190F2122}</Project>
+      <Name>conformance_concurrent_hash_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_lru_cache.vcxproj">
+      <Project>{7BFAA089-A4BD-3304-B977-C539F232C403}</Project>
+      <Name>conformance_concurrent_lru_cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_map.vcxproj">
+      <Project>{40E41AD7-4E74-3DEC-ADFF-ACB3D84444B9}</Project>
+      <Name>conformance_concurrent_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_priority_queue.vcxproj">
+      <Project>{8986A28A-A1EA-3103-A7E8-CC3F5D22EF8A}</Project>
+      <Name>conformance_concurrent_priority_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_queue.vcxproj">
+      <Project>{286DFA57-13E6-364F-9BF7-03BBC275E5C2}</Project>
+      <Name>conformance_concurrent_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_set.vcxproj">
+      <Project>{5F35BC37-6327-3767-9828-36C2060E82DE}</Project>
+      <Name>conformance_concurrent_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_unordered_map.vcxproj">
+      <Project>{F2682C15-4C13-3EB2-9CA6-2DDA8D35FE48}</Project>
+      <Name>conformance_concurrent_unordered_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_unordered_set.vcxproj">
+      <Project>{F80E9A37-0C39-3AE5-AB37-C21FC82E2A37}</Project>
+      <Name>conformance_concurrent_unordered_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_concurrent_vector.vcxproj">
+      <Project>{13D0D6E0-7E30-39EB-BE77-2C0493400CB5}</Project>
+      <Name>conformance_concurrent_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_continue_node.vcxproj">
+      <Project>{0F58F495-511A-30C0-A958-3EF6E6BE7821}</Project>
+      <Name>conformance_continue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_enumerable_thread_specific.vcxproj">
+      <Project>{A02EE314-7602-3471-8538-49EE13535C1B}</Project>
+      <Name>conformance_enumerable_thread_specific</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_function_node.vcxproj">
+      <Project>{10816DD7-09F2-3BA1-9789-5F475528D881}</Project>
+      <Name>conformance_function_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_global_control.vcxproj">
+      <Project>{BBAC7720-E35B-3711-8253-CFF7E8FC278A}</Project>
+      <Name>conformance_global_control</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_graph.vcxproj">
+      <Project>{37B1AFBF-EB86-3C01-A5DF-EF17F1FEF871}</Project>
+      <Name>conformance_graph</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_indexer_node.vcxproj">
+      <Project>{B7893E0F-80F1-39C6-BBAF-3911D884092E}</Project>
+      <Name>conformance_indexer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_input_node.vcxproj">
+      <Project>{F93573A5-04EE-3F7E-A46A-7FBDFEB0EFC3}</Project>
+      <Name>conformance_input_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_join_node.vcxproj">
+      <Project>{338DE4A7-4C26-3154-A2C3-D63F0DBD07FF}</Project>
+      <Name>conformance_join_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_limiter_node.vcxproj">
+      <Project>{1CC4F218-20D8-394B-B4FB-84F0BA0FBC26}</Project>
+      <Name>conformance_limiter_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_multifunction_node.vcxproj">
+      <Project>{41A2FF97-688C-3645-A310-69CA84964C5B}</Project>
+      <Name>conformance_multifunction_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_mutex.vcxproj">
+      <Project>{0EC3B9FC-A048-3039-92AF-4096ED259ED5}</Project>
+      <Name>conformance_mutex</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_overwrite_node.vcxproj">
+      <Project>{EC709426-C3DE-3A41-8883-7CF289FFB533}</Project>
+      <Name>conformance_overwrite_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_for.vcxproj">
+      <Project>{FEC2CA0A-6FBB-30FF-84CC-293B6EEBCC4C}</Project>
+      <Name>conformance_parallel_for</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_for_each.vcxproj">
+      <Project>{1692248A-09E3-32AC-B1FA-F5F810710944}</Project>
+      <Name>conformance_parallel_for_each</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_invoke.vcxproj">
+      <Project>{BE0E24E7-89B7-3EB9-B9D3-DE7648742797}</Project>
+      <Name>conformance_parallel_invoke</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_pipeline.vcxproj">
+      <Project>{B332AB7B-7266-36A7-9C68-C6F067270686}</Project>
+      <Name>conformance_parallel_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_reduce.vcxproj">
+      <Project>{6D11078E-1BBF-35C9-AF76-E0DF9687DB91}</Project>
+      <Name>conformance_parallel_reduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_scan.vcxproj">
+      <Project>{4F2D571C-B861-3782-91C8-1B0E73E7BF67}</Project>
+      <Name>conformance_parallel_scan</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_parallel_sort.vcxproj">
+      <Project>{3662E2F3-E6DE-3520-A3FF-7B2E162590E6}</Project>
+      <Name>conformance_parallel_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_priority_queue_node.vcxproj">
+      <Project>{DB36DC30-7AEF-3355-A865-62B65FF704C9}</Project>
+      <Name>conformance_priority_queue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_queue_node.vcxproj">
+      <Project>{56DCE501-10F8-34FF-B8C2-5F4330763588}</Project>
+      <Name>conformance_queue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_resumable_tasks.vcxproj">
+      <Project>{3AB0B5B7-0FB1-3FC6-BAD0-EFDEF1CF029C}</Project>
+      <Name>conformance_resumable_tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_sequencer_node.vcxproj">
+      <Project>{BD38222E-9CFB-39AC-8359-90D2ABEEE650}</Project>
+      <Name>conformance_sequencer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_split_node.vcxproj">
+      <Project>{1A576236-FEB2-3329-A9BF-F570F17D767D}</Project>
+      <Name>conformance_split_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_task_arena.vcxproj">
+      <Project>{52075963-4DAF-3AF5-AEBA-02A46ADFE20C}</Project>
+      <Name>conformance_task_arena</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_task_group.vcxproj">
+      <Project>{8C061B43-FD81-3913-8E72-68D36431A42B}</Project>
+      <Name>conformance_task_group</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_task_group_context.vcxproj">
+      <Project>{22E89BB3-7B15-31E6-B116-FB411D9E71AD}</Project>
+      <Name>conformance_task_group_context</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_tick_count.vcxproj">
+      <Project>{AB4602F3-5C95-3BBF-B764-6D5B722597EC}</Project>
+      <Name>conformance_tick_count</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_version.vcxproj">
+      <Project>{71B45CF9-4427-3E2F-9260-E03645EAE23E}</Project>
+      <Name>conformance_version</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\conformance_write_once_node.vcxproj">
+      <Project>{F7B6AD9E-D2C7-3CA8-BB5F-9B7824562136}</Project>
+      <Name>conformance_write_once_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\convex_hull\convex_hull_bench.vcxproj">
+      <Project>{E6C64E21-2942-3EBB-B111-55F3F8E9D860}</Project>
+      <Name>convex_hull_bench</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\convex_hull\convex_hull_sample.vcxproj">
+      <Project>{360A7832-78AA-329A-8935-D68670BCE263}</Project>
+      <Name>convex_hull_sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\concurrent_hash_map\count_strings\count_strings.vcxproj">
+      <Project>{3A52E122-24CC-301A-B5CF-43F6AF0B5689}</Project>
+      <Name>count_strings</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\dining_philosophers\dining_philosophers.vcxproj">
+      <Project>{229E4BD0-DD77-3667-B75D-CAD264CCE0DB}</Project>
+      <Name>dining_philosophers</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\fgbzip2\fgbzip2.vcxproj">
+      <Project>{DBC18CC1-83F2-345F-A831-FE6C26BACD7D}</Project>
+      <Name>fgbzip2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\test_all\fibonacci\fibonacci.vcxproj">
+      <Project>{CC12C5B8-FE51-3FB7-B930-3374D91733A7}</Project>
+      <Name>fibonacci</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_arena\fractal\fractal.vcxproj">
+      <Project>{6C19A03E-D23D-3A9A-AB7E-2FBF237B0879}</Project>
+      <Name>fractal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\game_of_life\game_of_life.vcxproj">
+      <Project>{7BEC576A-E5DA-3DFC-9124-5A2147513C05}</Project>
+      <Name>game_of_life</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\logic_sim\logic_sim.vcxproj">
+      <Project>{17B4A213-835A-3E92-939D-1EF4A273A6A8}</Project>
+      <Name>logic_sim</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for_each\parallel_preorder\parallel_preorder.vcxproj">
+      <Project>{8FCC6737-157B-3E97-A54E-D243C219C9F9}</Project>
+      <Name>parallel_preorder</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\polygon_overlay\polygon_overlay.vcxproj">
+      <Project>{AC7F4113-52E5-34F5-A6E4-420DC96478E8}</Project>
+      <Name>polygon_overlay</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_reduce\primes\primes.vcxproj">
+      <Project>{F9701B61-F323-38B5-9197-74AEF893A58D}</Project>
+      <Name>primes</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\seismic\seismic.vcxproj">
+      <Project>{DEF7BCBC-A24A-3163-A9A5-E78F4E9A9AD7}</Project>
+      <Name>seismic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\concurrent_priority_queue\shortpath\shortpath.vcxproj">
+      <Project>{DEA125B4-B5EF-3B54-86A6-D1B5F0788CF0}</Project>
+      <Name>shortpath</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\graph\som\som.vcxproj">
+      <Project>{4F8D7638-9BFE-3D51-A88F-624457C684D2}</Project>
+      <Name>som</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_pipeline\square\square.vcxproj">
+      <Project>{C78E1105-3995-33DA-B954-A5A4634A24E6}</Project>
+      <Name>square</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_extended.vcxproj">
+      <Project>{EE7AA5D8-BE65-3F65-82C7-3D84F4FA3E26}</Project>
+      <Name>sub_string_finder_extended</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_pretty.vcxproj">
+      <Project>{EF82128D-604B-34A6-BD36-4973E1A5ACD5}</Project>
+      <Name>sub_string_finder_pretty</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\getting_started\sub_string_finder\sub_string_finder_simple.vcxproj">
+      <Project>{1D71CAF0-E376-3B5C-9F17-560D611CDDFC}</Project>
+      <Name>sub_string_finder_simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\task_group\sudoku\sudoku.vcxproj">
+      <Project>{ECD570BB-CABB-3923-950E-B600D338AB1F}</Project>
+      <Name>sudoku</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\examples\parallel_for\tachyon\tachyon.vcxproj">
+      <Project>{B18DB7CA-274A-3D91-9CDD-0909957887FA}</Project>
+      <Name>tachyon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\src\tbb\tbb.vcxproj">
+      <Project>{8443D1A7-F2F8-3EA9-88EF-33FE671CE841}</Project>
+      <Name>tbb</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\src\tbbmalloc\tbbmalloc.vcxproj">
+      <Project>{FB2538F0-23EF-3459-B784-A92CB5459AEF}</Project>
+      <Name>tbbmalloc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\src\tbbmalloc_proxy\tbbmalloc_proxy.vcxproj">
+      <Project>{3552C6C4-70B0-37F7-80D7-2A0B08314104}</Project>
+      <Name>tbbmalloc_proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_allocators.vcxproj">
+      <Project>{9780A4BD-5049-3515-9B36-361964669ADA}</Project>
+      <Name>test_allocators</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_arena_constraints.vcxproj">
+      <Project>{73C62867-5533-37A9-AB6C-B12AC9A25392}</Project>
+      <Name>test_arena_constraints</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_arena_priorities.vcxproj">
+      <Project>{30D6729C-DB5B-3B69-9453-10F23A317427}</Project>
+      <Name>test_arena_priorities</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_async_node.vcxproj">
+      <Project>{2E6BBFAA-E9E4-3C73-9C97-7D271767F066}</Project>
+      <Name>test_async_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_blocked_range.vcxproj">
+      <Project>{DF01C424-D772-3A7E-AA31-F7A980B4FBEF}</Project>
+      <Name>test_blocked_range</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_broadcast_node.vcxproj">
+      <Project>{76C9C94F-AD63-3660-B4F2-F297E8D566D8}</Project>
+      <Name>test_broadcast_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_buffer_node.vcxproj">
+      <Project>{3FD2A550-BD4F-360C-B977-D1C7070811C4}</Project>
+      <Name>test_buffer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_collaborative_call_once.vcxproj">
+      <Project>{E2F7411B-3599-3A5B-B65C-2924CC075D35}</Project>
+      <Name>test_collaborative_call_once</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_composite_node.vcxproj">
+      <Project>{8DC050EB-BBD2-3AEF-9E66-4E85DF26AFA1}</Project>
+      <Name>test_composite_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_hash_map.vcxproj">
+      <Project>{2F827B88-FDBB-3384-BEC6-173E622284F0}</Project>
+      <Name>test_concurrent_hash_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_lru_cache.vcxproj">
+      <Project>{448EF033-EC8B-3EBD-9FE0-2DDBD1DAAE25}</Project>
+      <Name>test_concurrent_lru_cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_map.vcxproj">
+      <Project>{E377FA95-3B25-32B2-8112-D427E16D7560}</Project>
+      <Name>test_concurrent_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_monitor.vcxproj">
+      <Project>{E9D94B8C-17A5-3046-83EB-038BB7DD9BC9}</Project>
+      <Name>test_concurrent_monitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_priority_queue.vcxproj">
+      <Project>{E43BDE5B-EE5A-3DC3-8B9F-027F5FFF3538}</Project>
+      <Name>test_concurrent_priority_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_queue.vcxproj">
+      <Project>{7A130D07-394F-30DB-BF73-1498599EFD7D}</Project>
+      <Name>test_concurrent_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_queue_whitebox.vcxproj">
+      <Project>{5233E127-0B85-32C5-BBF8-6BCA98067428}</Project>
+      <Name>test_concurrent_queue_whitebox</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_set.vcxproj">
+      <Project>{80E9EE41-6C39-3C6D-98E9-3956936FDEAC}</Project>
+      <Name>test_concurrent_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_unordered_map.vcxproj">
+      <Project>{3E554548-5E8D-3F5E-8CCF-073CBE4809CF}</Project>
+      <Name>test_concurrent_unordered_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_unordered_set.vcxproj">
+      <Project>{4552CBB4-FCCF-3A5C-B46B-B93B5189C47E}</Project>
+      <Name>test_concurrent_unordered_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_concurrent_vector.vcxproj">
+      <Project>{5D93D9E6-C9BC-3370-A50F-B95A55FB634B}</Project>
+      <Name>test_concurrent_vector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_continue_node.vcxproj">
+      <Project>{833D5F7C-B1B5-33F2-B0BA-20822EC0540C}</Project>
+      <Name>test_continue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_dynamic_link.vcxproj">
+      <Project>{1EFE27BF-6888-331E-9CD3-AFB8D43C801D}</Project>
+      <Name>test_dynamic_link</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_eh_algorithms.vcxproj">
+      <Project>{D22C3C39-165F-3C25-8699-FE586D9A24B1}</Project>
+      <Name>test_eh_algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_eh_flow_graph.vcxproj">
+      <Project>{D69171BC-2220-3C0A-81AA-B761281267A8}</Project>
+      <Name>test_eh_flow_graph</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_eh_thread.vcxproj">
+      <Project>{261D3A0D-B6FB-390B-BE4B-040D66F8FF36}</Project>
+      <Name>test_eh_thread</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_enumerable_thread_specific.vcxproj">
+      <Project>{21E3A8B2-718C-3E74-91B8-4D443FDB6241}</Project>
+      <Name>test_enumerable_thread_specific</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_environment_whitebox.vcxproj">
+      <Project>{293999B7-45DB-3D0D-A69C-4D2BC31D7DE3}</Project>
+      <Name>test_environment_whitebox</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_flow_graph.vcxproj">
+      <Project>{F96A15A8-C578-3BBB-843A-E094E5155963}</Project>
+      <Name>test_flow_graph</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_flow_graph_priorities.vcxproj">
+      <Project>{AD0A3E11-BF3E-3AE0-80CD-F4012C6B8AD0}</Project>
+      <Name>test_flow_graph_priorities</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_flow_graph_whitebox.vcxproj">
+      <Project>{D416D0D1-44C9-3841-AE5E-A02C7D6FF73A}</Project>
+      <Name>test_flow_graph_whitebox</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_function_node.vcxproj">
+      <Project>{CF21CB6B-B166-36C7-82DF-EF4F004A5BA7}</Project>
+      <Name>test_function_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_global_control.vcxproj">
+      <Project>{C2EEE253-3FF6-3055-85FE-07B8143096AF}</Project>
+      <Name>test_global_control</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_handle_perror.vcxproj">
+      <Project>{BABDD616-048E-3425-BBEC-26C8997DA8E9}</Project>
+      <Name>test_handle_perror</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_hw_concurrency.vcxproj">
+      <Project>{F7B88FDA-2ADC-3FF0-A6A3-07B526CA2B5E}</Project>
+      <Name>test_hw_concurrency</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_implicit_linkage_on_windows.vcxproj">
+      <Project>{CCE69C96-31AB-3B9A-8211-5AEF481B9365}</Project>
+      <Name>test_implicit_linkage_on_windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_indexer_node.vcxproj">
+      <Project>{FAC7962E-4E03-3DC6-8254-75E2D554C1BC}</Project>
+      <Name>test_indexer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_input_node.vcxproj">
+      <Project>{11074CCC-96BC-35B6-A0D0-AA17AA6F0A69}</Project>
+      <Name>test_input_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_intrusive_list.vcxproj">
+      <Project>{6590C404-03EA-3C78-B73C-36DC3964670E}</Project>
+      <Name>test_intrusive_list</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_join_node.vcxproj">
+      <Project>{0EE20E6E-0B66-30AE-9ACC-42CEF9061F5B}</Project>
+      <Name>test_join_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_join_node_key_matching.vcxproj">
+      <Project>{BD86884B-ECF6-352E-A6A5-8D2D0A57F4EE}</Project>
+      <Name>test_join_node_key_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_join_node_msg_key_matching.vcxproj">
+      <Project>{80DFDFB6-5BD1-3067-BF08-AB37A78D0182}</Project>
+      <Name>test_join_node_msg_key_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_join_node_msg_key_matching_n_args.vcxproj">
+      <Project>{70D98715-2491-34F5-9D58-FB28CB7243C1}</Project>
+      <Name>test_join_node_msg_key_matching_n_args</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_join_node_preview.vcxproj">
+      <Project>{7D589BB4-6DB0-3E71-996F-8702803BCDAC}</Project>
+      <Name>test_join_node_preview</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_limiter_node.vcxproj">
+      <Project>{CF876B02-E346-3659-81F1-4A88F2A03412}</Project>
+      <Name>test_limiter_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_atexit.vcxproj">
+      <Project>{0953FDC6-AC4D-338C-8E75-52F56F12FB4F}</Project>
+      <Name>test_malloc_atexit</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_compliance.vcxproj">
+      <Project>{193C36CA-0421-3743-AE52-F9161CA42C28}</Project>
+      <Name>test_malloc_compliance</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_init_shutdown.vcxproj">
+      <Project>{D0DF6F86-1357-381F-AD85-932BA7EC7CAC}</Project>
+      <Name>test_malloc_init_shutdown</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_lib_unload.vcxproj">
+      <Project>{37BD4E98-D8A8-34E4-948F-22F159985524}</Project>
+      <Name>test_malloc_lib_unload</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_new_handler.vcxproj">
+      <Project>{D49148F4-43E4-3419-8754-594BF2C70BD3}</Project>
+      <Name>test_malloc_new_handler</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_overload.vcxproj">
+      <Project>{FC87C8A8-D27F-3A95-8959-4C272ABD2F86}</Project>
+      <Name>test_malloc_overload</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_overload_disable.vcxproj">
+      <Project>{2B022BAF-2642-3591-8A9D-FA8E94DB93A2}</Project>
+      <Name>test_malloc_overload_disable</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_pools.vcxproj">
+      <Project>{B8D82771-05EB-3B44-BA30-9E69E083FD71}</Project>
+      <Name>test_malloc_pools</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_pure_c.vcxproj">
+      <Project>{7D6C05C4-314F-3BCB-83B3-1BAFFF555BF0}</Project>
+      <Name>test_malloc_pure_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_regression.vcxproj">
+      <Project>{34F19D28-EEFB-33F0-8A43-2E4AAE128DBB}</Project>
+      <Name>test_malloc_regression</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_shutdown_hang.vcxproj">
+      <Project>{7F6DCCBB-7E2D-361B-BD3E-B237E3AE58C6}</Project>
+      <Name>test_malloc_shutdown_hang</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_used_by_lib.vcxproj">
+      <Project>{FA90053E-08AE-33FB-87CE-61937F4EE5D4}</Project>
+      <Name>test_malloc_used_by_lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_malloc_whitebox.vcxproj">
+      <Project>{3EF1E42C-0780-316B-812E-75CBB479FD05}</Project>
+      <Name>test_malloc_whitebox</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_multifunction_node.vcxproj">
+      <Project>{A6E966EA-BE83-3947-8B9F-28DFC790B22B}</Project>
+      <Name>test_multifunction_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_mutex.vcxproj">
+      <Project>{5C6192C3-2992-3B1A-A06A-9DFE6D9B6AC1}</Project>
+      <Name>test_mutex</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_numa_dist.vcxproj">
+      <Project>{E9CC627E-2221-3D81-ADDD-3C6E04D039AD}</Project>
+      <Name>test_numa_dist</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_openmp.vcxproj">
+      <Project>{2FC9F6FE-CF86-3B2E-B4D6-3831BFD41655}</Project>
+      <Name>test_openmp</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_overwrite_node.vcxproj">
+      <Project>{7319473B-D69E-359B-8F37-514BC9E33F34}</Project>
+      <Name>test_overwrite_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_for.vcxproj">
+      <Project>{45A2DAA5-5EB5-3A95-B43C-144A83CC85DA}</Project>
+      <Name>test_parallel_for</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_for_each.vcxproj">
+      <Project>{71649248-8BD7-3DF8-B766-E1B51EA7198F}</Project>
+      <Name>test_parallel_for_each</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_invoke.vcxproj">
+      <Project>{432803CF-598F-31EF-A206-94FCAF2A10E2}</Project>
+      <Name>test_parallel_invoke</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_pipeline.vcxproj">
+      <Project>{6122ED32-57C1-3E3B-974B-C4F227FBCBD2}</Project>
+      <Name>test_parallel_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_reduce.vcxproj">
+      <Project>{D4FBD8F4-DA64-3778-8208-C649DE69E622}</Project>
+      <Name>test_parallel_reduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_scan.vcxproj">
+      <Project>{BDCFA796-0F0E-3D41-9CD5-107525B16E9D}</Project>
+      <Name>test_parallel_scan</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_parallel_sort.vcxproj">
+      <Project>{8AC87278-65C1-36B6-8A80-A6B40E0A2A19}</Project>
+      <Name>test_parallel_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_partitioner.vcxproj">
+      <Project>{B1CF7432-E356-3010-ABC6-894F851580EC}</Project>
+      <Name>test_partitioner</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_priority_queue_node.vcxproj">
+      <Project>{C9188E84-C27E-3A26-9659-BE211B286259}</Project>
+      <Name>test_priority_queue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_profiling.vcxproj">
+      <Project>{D733A503-D7D1-322B-B921-6A7FBCE5385C}</Project>
+      <Name>test_profiling</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_queue_node.vcxproj">
+      <Project>{5CFA5EFA-47B9-3E53-B6B6-F36D3CBD63FC}</Project>
+      <Name>test_queue_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_resumable_tasks.vcxproj">
+      <Project>{EEBF05A6-12A6-32CC-9768-1750076F983C}</Project>
+      <Name>test_resumable_tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_scalable_allocator.vcxproj">
+      <Project>{712D21FD-2EB4-3643-9375-69DD349D6476}</Project>
+      <Name>test_scalable_allocator</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_scheduler_mix.vcxproj">
+      <Project>{E3780C6A-42E5-3EC4-B39B-D0A2676235C5}</Project>
+      <Name>test_scheduler_mix</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_semaphore.vcxproj">
+      <Project>{FC9A2718-E719-303A-9198-33FBAB2814C0}</Project>
+      <Name>test_semaphore</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_sequencer_node.vcxproj">
+      <Project>{7F003124-7133-3751-BE2A-7FF19A126925}</Project>
+      <Name>test_sequencer_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_split_node.vcxproj">
+      <Project>{EC653725-D227-3C8E-BF5B-27C35E18172C}</Project>
+      <Name>test_split_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_tagged_msg.vcxproj">
+      <Project>{544EA68B-8E77-336A-B8E4-98AEED312BBE}</Project>
+      <Name>test_tagged_msg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_task.vcxproj">
+      <Project>{728E56D1-17B9-361F-85E6-4C6BF66BE47C}</Project>
+      <Name>test_task</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_task_arena.vcxproj">
+      <Project>{95E8EE49-C49B-3C7B-9401-ACAC6D9F6195}</Project>
+      <Name>test_task_arena</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_task_group.vcxproj">
+      <Project>{1F0677D4-D0A9-30BE-9D73-236FDE56D513}</Project>
+      <Name>test_task_group</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_tbb_fork.vcxproj">
+      <Project>{5D5F3CFD-7DAE-34B8-8C41-B58CC7E7DED7}</Project>
+      <Name>test_tbb_fork</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_tbb_header.vcxproj">
+      <Project>{015F4AF6-FCE0-321E-B22A-D4A064D52799}</Project>
+      <Name>test_tbb_header</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_tick_count.vcxproj">
+      <Project>{34176E54-4B43-3E4F-BCCB-1423EE62704E}</Project>
+      <Name>test_tick_count</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\oneTBB\VS\test\test_write_once_node.vcxproj">
+      <Project>{378EB1EA-40DE-314C-BFE7-09002309729B}</Project>
+      <Name>test_write_once_node</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
