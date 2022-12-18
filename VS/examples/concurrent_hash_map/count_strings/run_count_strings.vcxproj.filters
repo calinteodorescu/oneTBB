@@ -4,7 +4,6 @@
     <CustomBuild Include="D:\Git\oneTBB\VS\CMakeFiles\ee698d7c55d5cc6b36844a3575b87731\run_count_strings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Git\oneTBB\examples\concurrent_hash_map\count_strings\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">

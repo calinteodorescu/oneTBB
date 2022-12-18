@@ -64,9 +64,6 @@ private:
 std::map<std::size_t, int> hashes;
 int c = 0;
 
-//! String type
-typedef std::basic_string<char, std::char_traits<char>, oneapi::tbb::tbb_allocator<char>> MyString;
-
 //! Set to true to counts.
 static bool verbose = false;
 static bool silent = false;
@@ -75,39 +72,61 @@ static bool count_collisions = false;
 long N = 1000000;
 const int size_factor = 2;
 
+//! String type
+using TMyString    = std::basic_string< char,
+                                       std::char_traits< char >,
+                                       oneapi::tbb::tbb_allocator< char >
+                                     >;
 //! A concurrent hash table that maps strings to ints.
-typedef oneapi::tbb::concurrent_hash_map<MyString, int> StringTable;
+using TStringTable = oneapi::tbb::concurrent_hash_map< TMyString, int >;
 
 //! Function object for counting occurrences of strings.
-struct Tally {
-    StringTable& table;
-    Tally(StringTable& table_) : table(table_) {}
-    void operator()(const oneapi::tbb::blocked_range<MyString*> range) const {
-        for (MyString* p = range.begin(); p != range.end(); ++p) {
-            StringTable::accessor a;
-            table.insert(a, *p);
+struct Tally 
+{
+    TStringTable& m_table;
+
+    Tally( TStringTable& table_ )
+    : m_table( table_ )
+    {
+    }
+    void operator( )( const oneapi::tbb::blocked_range< TMyString* > range ) const
+    {
+        for( TMyString* p = range.begin( )
+             ;
+             p != range.end()
+             ;
+             ++p
+           )
+        {
+            TStringTable::accessor a;
+            m_table.insert( a, * p );
             a->second += 1;
         }
     }
 };
 
-static MyString* Data;
+static TMyString* Data;
 
-static void CountOccurrences(int nthreads) {
-    StringTable table;
+static void CountOccurrences( int nthreads )
+{
+    TStringTable table;
 
-    oneapi::tbb::tick_count t0 = oneapi::tbb::tick_count::now();
-    oneapi::tbb::parallel_for(oneapi::tbb::blocked_range<MyString*>(Data, Data + N, 1000),
-                              Tally(table));
+    oneapi::tbb::tick_count t0 = oneapi::tbb::tick_count::now( );
+    oneapi::tbb::parallel_for( oneapi::tbb::blocked_range< TMyString* >( Data,
+                                                                         Data + N,
+                                                                         1000
+                                                                       ),
+                               Tally( table )
+                             );
     oneapi::tbb::tick_count t1 = oneapi::tbb::tick_count::now();
 
     int n = 0;
-    for (StringTable::iterator i = table.begin(); i != table.end(); ++i) {
+    for (TStringTable::iterator i = table.begin(); i != table.end(); ++i) {
         if (verbose && nthreads)
             printf("%s %d\n", i->first.c_str(), i->second);
         if (!silent && count_collisions) {
             // it doesn't count real collisions in hash_map, a mask should be applied on hash value
-            hashes[std::hash<MyString>()(i->first) & 0xFFFF]++;
+            hashes[std::hash<TMyString>()(i->first) & 0xFFFF]++;
         }
         n += i->second;
     }
@@ -225,9 +244,9 @@ static void CreateData() {
             Data[i] += GetLetters(type++, 1);
         Data[i] += GetLetters(type, 2);
     }
-    MyString planet = Data[12];
+    TMyString planet = Data[12];
     planet[0] = toupper(planet[0]);
-    MyString helloworld = Data[0];
+    TMyString helloworld = Data[0];
     helloworld[0] = toupper(helloworld[0]);
     helloworld += ", " + Data[1] + " " + Data[2] + " " + Data[3] + " " + Data[4] + " " + Data[5];
     if (!silent)
@@ -237,7 +256,7 @@ static void CreateData() {
 }
 
 int main(int argc, char* argv[]) {
-    StringTable table;
+    TStringTable table;
     oneapi::tbb::tick_count mainStartTime = oneapi::tbb::tick_count::now();
     srand(2);
 
@@ -260,7 +279,7 @@ int main(int argc, char* argv[]) {
     if (silent)
         verbose = false;
 
-    Data = new MyString[N];
+    Data = new TMyString[N];
     CreateData();
 
     if (threads.first) {
