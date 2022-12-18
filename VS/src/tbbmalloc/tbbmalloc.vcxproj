@@ -92,9 +92,9 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbbmalloc_debug.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>D:/Git/oneTBB/src/tbbmalloc/def/win64-tbbmalloc.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbbmalloc_debug.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
@@ -137,11 +137,11 @@
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbbmalloc.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>D:/Git/oneTBB/src/tbbmalloc/def/win64-tbbmalloc.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbbmalloc.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>

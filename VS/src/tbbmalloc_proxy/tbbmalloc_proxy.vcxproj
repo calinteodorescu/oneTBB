@@ -94,8 +94,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbbmalloc_proxy_debug.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbbmalloc_proxy_debug.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
@@ -140,10 +140,10 @@
       <AdditionalDependencies>..\..\msvc_19.34_cxx_64_md_release\tbbmalloc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbbmalloc_proxy.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbbmalloc_proxy.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>

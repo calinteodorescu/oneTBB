@@ -107,9 +107,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbb12_debug.lib</ImportLibrary>
-      <ModuleDefinitionFile>D:/Git/oneTBB/src/tbb/def/win64-tbb.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_debug/tbb12_debug.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>../../../src/tbb/def/win64-tbb.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
@@ -167,11 +167,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbb12.lib</ImportLibrary>
-      <ModuleDefinitionFile>D:/Git/oneTBB/src/tbb/def/win64-tbb.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release/tbb12.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>../../../src/tbb/def/win64-tbb.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
     </Link>
@@ -242,12 +242,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ResourceCompile Include="D:\Git\oneTBB\src\tbb\tbb.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Git\oneTBB\VS\ZERO_CHECK.vcxproj">
-      <Project>{CC2F96E0-33B3-39FC-92E8-B642B502DDAD}</Project>
-      <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
+    <None Include="..\..\..\src\tbb\def\win64-tbb.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
