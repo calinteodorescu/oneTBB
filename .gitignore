@@ -63,3 +63,4 @@ CMakeSettings.json
 .vs
 *.exp
 /VS/msvc_19.34_cxx_64_md_debug
+/VS/JSON
