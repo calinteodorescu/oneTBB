@@ -79,17 +79,12 @@
     <ClCompile Include="D:\Git\oneTBB\src\tbb\task_group_context.cpp">
       <Filter>%2a%2a%2a Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Git\oneTBB\src\tbb\version.cpp">
-      <Filter>%2a%2a%2a Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Git\oneTBB\src\tbb\queuing_rw_mutex.cpp">
       <Filter>%2a%2a%2a Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="D:\Git\oneTBB\src\tbb\tbb.rc">
-      <Filter>%2a%2a%2a Source Files</Filter>
-    </ResourceCompile>
+    <ClCompile Include="D:\Git\oneTBB\src\tbb\version.cpp">
+      <Filter>%2a%2a Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="%2a%2a Resource Files">
@@ -97,6 +92,9 @@
     </Filter>
     <Filter Include="%2a%2a%2a Source Files">
       <UniqueIdentifier>{8DD12B64-9548-3308-9CAB-9A94AF907CF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a%2a Header Files">
+      <UniqueIdentifier>{57278225-c5d0-4fcc-af7d-311ad9b3662c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -108,5 +106,27 @@
     <CustomBuild Include="D:\Git\oneTBB\src\tbb\CMakeLists.txt">
       <Filter>%2a%2a Resource Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\Git\oneTBB\src\tbb\tbb.rc">
+      <Filter>%2a%2a Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\tbb\concurrent_unordered_set.h">
+      <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\oneapi\tbb\concurrent_unordered_set.h">
+      <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\oneapi\tbb\detail\_namespace_injection.h">
+      <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\oneapi\tbb\detail\_concurrent_unordered_base.h">
+      <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\oneapi\tbb\tbb_allocator.h">
+      <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
