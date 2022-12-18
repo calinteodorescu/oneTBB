@@ -69,7 +69,9 @@ static bool verbose = false;
 static bool silent = false;
 static bool count_collisions = false;
 //! Problem size
-long N = 1000000;
+
+long PROBLEM_SIZE = 1'000'000;
+
 const int size_factor = 2;
 
 //! String type
@@ -91,48 +93,50 @@ struct Tally
     }
     void operator( )( const oneapi::tbb::blocked_range< TMyString* > range ) const
     {
-        for( TMyString* p = range.begin( )
-             ;
-             p != range.end()
-             ;
-             ++p
-           )
+        for( auto& p : range )
         {
             TStringTable::accessor a;
-            m_table.insert( a, * p );
+            m_table.insert( a, p );
             a->second += 1;
         }
     }
 };
 
-static TMyString* Data;
+static TMyString* s_data = nullptr;
 
 static void CountOccurrences( int nthreads )
 {
     TStringTable table;
 
     oneapi::tbb::tick_count t0 = oneapi::tbb::tick_count::now( );
-    oneapi::tbb::parallel_for( oneapi::tbb::blocked_range< TMyString* >( Data,
-                                                                         Data + N,
+    oneapi::tbb::parallel_for( oneapi::tbb::blocked_range< TMyString* >( s_data,
+                                                                         s_data + PROBLEM_SIZE,
                                                                          1000
                                                                        ),
                                Tally( table )
                              );
-    oneapi::tbb::tick_count t1 = oneapi::tbb::tick_count::now();
+    oneapi::tbb::tick_count t1 = oneapi::tbb::tick_count::now( );
 
     int n = 0;
-    for (TStringTable::iterator i = table.begin(); i != table.end(); ++i) {
+    for( auto& it : table )
+    {
         if (verbose && nthreads)
-            printf("%s %d\n", i->first.c_str(), i->second);
-        if (!silent && count_collisions) {
+            printf("%s %d\n", it.first.c_str(), it.second);
+
+        if (!silent && count_collisions) 
+        {
             // it doesn't count real collisions in hash_map, a mask should be applied on hash value
-            hashes[std::hash<TMyString>()(i->first) & 0xFFFF]++;
+            hashes[std::hash<TMyString>()(it.first) & 0xFFFF]++;
         }
-        n += i->second;
+
+        n += it.second;
     }
-    if (!silent && count_collisions) {
-        for (auto i = hashes.begin(); i != hashes.end(); ++i)
-            c += i->second - 1;
+
+    if (!silent && count_collisions) 
+    {
+        for( auto& it : hashes )
+            c += it.second - 1;
+
         printf("hashes = %d  collisions = %d  ", static_cast<int>(hashes.size()), c);
         c = 0;
         hashes.clear();
@@ -145,11 +149,13 @@ static void CountOccurrences( int nthreads )
 
 /// Generator of random words
 
-struct Sound {
+struct Sound 
+{
     const char* chars;
     int rates[3]; // beginning, middle, ending
 };
-Sound Vowels[] = {
+Sound Vowels[] = 
+{
     { "e", { 445, 6220, 1762 } }, { "a", { 704, 5262, 514 } }, { "i", { 402, 5224, 162 } },
     { "o", { 248, 3726, 191 } },  { "u", { 155, 1669, 23 } },  { "y", { 4, 400, 989 } },
     { "io", { 5, 512, 18 } },     { "ia", { 1, 329, 111 } },   { "ea", { 21, 370, 16 } },
@@ -163,7 +169,8 @@ Sound Vowels[] = {
     { "oy", { 0, 10, 13 } },      { "ye", { 8, 7, 7 } },       { "ion", { 0, 0, 20 } },
     { "ing", { 0, 0, 20 } },      { "ium", { 0, 0, 10 } },     { "er", { 0, 0, 20 } }
 };
-Sound Consonants[] = {
+Sound Consonants[] = 
+{
     { "r", { 483, 1414, 1110 } }, { "n", { 312, 1548, 1114 } }, { "t", { 363, 1653, 251 } },
     { "l", { 424, 1341, 489 } },  { "c", { 734, 735, 260 } },   { "m", { 732, 785, 161 } },
     { "d", { 558, 612, 389 } },   { "s", { 574, 570, 405 } },   { "p", { 519, 361, 98 } },
@@ -208,54 +215,76 @@ Sound Consonants[] = {
     { "xt", { 0, 18, 1 } },       { "xp", { 0, 20, 0 } },       { "rst", { 0, 15, 5 } },
     { "nh", { 0, 19, 0 } },       { "wr", { 14, 5, 0 } }
 };
-const int VowelsNumber = sizeof(Vowels) / sizeof(Sound);
-const int ConsonantsNumber = sizeof(Consonants) / sizeof(Sound);
-int VowelsRatesSum[3] = { 0, 0, 0 }, ConsonantsRatesSum[3] = { 0, 0, 0 };
+const int VowelsNumber          = sizeof(Vowels)     / sizeof(Sound);
+const int ConsonantsNumber      = sizeof(Consonants) / sizeof(Sound);
+int       VowelsRatesSum    [3] = { 0, 0, 0 };
+int       ConsonantsRatesSum[3] = { 0, 0, 0 };
 
-int CountRateSum(Sound sounds[], const int num, const int part) {
+int CountRateSum( Sound sounds[], 
+                  const int num, 
+                  const int part
+                )
+{
     int sum = 0;
     for (int i = 0; i < num; i++)
         sum += sounds[i].rates[part];
     return sum;
 }
 
-const char* GetLetters(int type, const int part) {
+const char* GetLetters(int type, const int part) 
+{
     Sound* sounds;
     int rate, i = 0;
+
     if (type & 1)
         sounds = Vowels, rate = rand() % VowelsRatesSum[part];
     else
         sounds = Consonants, rate = rand() % ConsonantsRatesSum[part];
-    do {
+    
+    do 
+    {
         rate -= sounds[i++].rates[part];
-    } while (rate > 0);
+    } 
+    while (rate > 0);
+
     return sounds[--i].chars;
 }
 
-static void CreateData() {
-    for (int i = 0; i < 3; i++) {
+static void CreateData() 
+{
+    for (int i = 0; i < 3; i++) 
+    {
         ConsonantsRatesSum[i] = CountRateSum(Consonants, ConsonantsNumber, i);
-        VowelsRatesSum[i] = CountRateSum(Vowels, VowelsNumber, i);
+        VowelsRatesSum    [i] = CountRateSum(Vowels,     VowelsNumber,     i);
     }
-    for (int i = 0; i < N; ++i) {
+
+    for (int i = 0; i < PROBLEM_SIZE; ++i) 
+    {
         int type = rand();
-        Data[i] = GetLetters(type++, 0);
+
+        s_data[i] = GetLetters(type++, 0);
+
         for (int j = 0; j < type % size_factor; ++j)
-            Data[i] += GetLetters(type++, 1);
-        Data[i] += GetLetters(type, 2);
+            s_data[i] += GetLetters(type++, 1);
+
+        s_data[i] += GetLetters(type, 2);
     }
-    TMyString planet = Data[12];
+
+    TMyString planet = s_data[12];
     planet[0] = toupper(planet[0]);
-    TMyString helloworld = Data[0];
+
+    TMyString helloworld = s_data[0];
     helloworld[0] = toupper(helloworld[0]);
-    helloworld += ", " + Data[1] + " " + Data[2] + " " + Data[3] + " " + Data[4] + " " + Data[5];
+    helloworld += ", " + s_data[1] + " " + s_data[2] + " " + s_data[3] + " " + s_data[4] + " " + s_data[5];
+
     if (!silent)
         printf("Message from planet '%s': %s!\nAnalyzing whole text...\n",
                planet.c_str(),
                helloworld.c_str());
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
     TStringTable table;
     oneapi::tbb::tick_count mainStartTime = oneapi::tbb::tick_count::now();
     srand(2);
@@ -263,50 +292,73 @@ int main(int argc, char* argv[]) {
     //! Working threads count
     // The 1st argument is the function to obtain 'auto' value; the 2nd is the default value
     // The example interprets 0 threads as "run serially, then fully subscribed"
-    utility::thread_number_range threads(utility::get_default_num_threads, 0);
+    utility::thread_number_range threads( utility::get_default_num_threads,
+                                          0
+                                        );
 
-    utility::parse_cli_arguments(
+    utility::parse_cli_arguments
+    (
         argc,
         argv,
         utility::cli_argument_pack()
             //"-h" option for displaying help is present implicitly
             .positional_arg(threads, "n-of-threads", utility::thread_number_range_desc)
-            .positional_arg(N, "n-of-strings", "number of strings")
-            .arg(verbose, "verbose", "verbose mode")
-            .arg(silent, "silent", "no output except elapsed time")
-            .arg(count_collisions, "count_collisions", "print the count of collisions"));
+            .positional_arg(PROBLEM_SIZE, "n-of-strings", "number of strings")
+            .arg           (verbose, "verbose", "verbose mode")
+            .arg           (silent, "silent", "no output except elapsed time")
+            .arg           (count_collisions, "count_collisions", "print the count of collisions"));
 
     if (silent)
         verbose = false;
 
-    Data = new TMyString[N];
+    s_data = new TMyString[PROBLEM_SIZE];
+
     CreateData();
 
-    if (threads.first) {
-        for (int p = threads.first; p <= threads.last; p = threads.step(p)) {
+    if ( threads.first ) 
+    {
+        for( int p = threads.first
+             ;
+             p <= threads.last
+             ;
+             p = threads.step( p )
+           ) 
+        {
             if (!silent)
                 printf("threads = %d  ", p);
-            oneapi::tbb::global_control c(oneapi::tbb::global_control::max_allowed_parallelism, p);
-            CountOccurrences(p);
+
+            oneapi::tbb::global_control c( oneapi::tbb::global_control::max_allowed_parallelism, 
+                                           p
+                                         );
+            CountOccurrences( p );
         }
     }
-    else { // Number of threads wasn't set explicitly. Run serial and parallel version
+    else 
+    { // Number of threads wasn't set explicitly. Run serial and parallel version
         { // serial run
             if (!silent)
                 printf("serial run   ");
-            oneapi::tbb::global_control c(oneapi::tbb::global_control::max_allowed_parallelism, 1);
-            CountOccurrences(1);
+
+            oneapi::tbb::global_control c( oneapi::tbb::global_control::max_allowed_parallelism, 
+                                           1
+                                         );
+
+            CountOccurrences( 1 );
         }
+
         { // parallel run (number of threads is selected automatically)
             if (!silent)
                 printf("parallel run ");
-            oneapi::tbb::global_control c(oneapi::tbb::global_control::max_allowed_parallelism,
-                                          utility::get_default_num_threads());
-            CountOccurrences(0);
+
+            oneapi::tbb::global_control c( oneapi::tbb::global_control::max_allowed_parallelism,
+                                           utility::get_default_num_threads( )
+                                         );
+
+            CountOccurrences( 0 );
         }
     }
 
-    delete[] Data;
+    delete[] s_data;
 
     utility::report_elapsed_time((oneapi::tbb::tick_count::now() - mainStartTime).seconds());
 
