@@ -103,11 +103,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Git\oneTBB\src\tbb\CMakeLists.txt">
-      <Filter>%2a%2a Resource Files</Filter>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="D:\Git\oneTBB\src\tbb\tbb.rc">
       <Filter>%2a%2a Resource Files</Filter>
     </ResourceCompile>
