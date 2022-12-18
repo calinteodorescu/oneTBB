@@ -146,15 +146,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-C:\Tools\CMake\bin\cmake.exe -DBINARY_DIR=D:/Git/oneTBB/VS -DSOURCE_DIR=D:/Git/oneTBB -DBIN_PATH=D:/Git/oneTBB/VS/msvc_19.34_cxx_64_md_release -DVARS_TEMPLATE=windows/env/vars.bat.in -DVARS_NAME=vars.bat -DTBB_INSTALL_VARS=OFF -DTBB_CMAKE_INSTALL_LIBDIR=lib -P D:/Git/oneTBB/integration/cmake/generate_vars.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -172,37 +165,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\Git\oneTBB\src\tbb\CMakeLists.txt">
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Git/oneTBB/src/tbb/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/src/tbb/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\integration\pkg-config\tbb.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\oneTBB\VS\src\tbb\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Git/oneTBB/src/tbb/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Tools\CMake\bin\cmake.exe -SD:/Git/oneTBB -BD:/Git/oneTBB/VS --check-stamp-file D:/Git/oneTBB/VS/src/tbb/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\integration\pkg-config\tbb.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\oneTBB\VS\src\tbb\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Git\oneTBB\src\tbb\address_waiter.cpp" />
     <ClCompile Include="D:\Git\oneTBB\src\tbb\allocator.cpp" />
